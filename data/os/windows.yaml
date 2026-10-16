@@ -1,0 +1,15 @@
+pupexa::profile::iis::iis_feature_list: ['Web-WebServer','Web-Scripting-Tools']
+# pupexa::profile::win_firewall::win_fw_name: windows_firewall
+pupexa::profile::win_firewall::win_fw_ensure: running
+pupexa::profile::win_firewall::win_fw_exception: HTTP/HTTPS
+pupexa::profile::win_firewall::win_fw_exception_ensure: present
+pupexa::profile::win_firewall::win_fw_direction: inbound
+pupexa::profile::win_firewall::win_fw_action: allow
+pupexa::profile::win_firewall::win_fw_enabled: true
+pupexa::profile::win_firewall::win_fw_protocol: tcp
+pupexa::profile::win_firewall::win_fw_local_port: ['80', '443']
+pupexa::profile::win_firewall::win_fw_remote_port: any
+pupexa::profile::win_firewall::win_fw_display_name: IIS Webserver access HTTP/HTTPS
+pupexa::profile::win_firewall::win_fw_description: Puppet Inbound rule for an IIS Webserver via HTTP/HTTPS [TCP 80,443]
+pupexa::profile::win_webpage::webcontent: "Hello World! This page was generated using data from os/windows.yaml in the module pupexa in hiera!"
+pupexa::profile::win_webpage::weblocation: 'C:\Inetpub\wwwroot\index.html'

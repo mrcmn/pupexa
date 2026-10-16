@@ -1,0 +1,6 @@
+---
+pupexa::profile::lin_firewall::fw_web_jump: accept
+pupexa::profile::lin_firewall::fw_web_proto: tcp
+pupexa::profile::lin_firewall::fw_web_port_list: [80, 443]
+pupexa::profile::lin_firewall::fw_web_description: 100 allow http and https access
+pupexa::profile::lin_webpage::weblocation: /var/www/html/index.html

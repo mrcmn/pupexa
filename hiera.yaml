@@ -1,0 +1,11 @@
+# pupexa/hiera.yaml
+---
+version: 5
+defaults:
+  datadir: data
+  data_hash: yaml_data
+hierarchy:
+  - name: 'OS-Familie'
+    path: 'os/%{facts.os.family}.yaml'
+  - name: 'Gemeinsame Defaults'
+    path: 'common.yaml'
